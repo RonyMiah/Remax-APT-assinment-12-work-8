@@ -1,0 +1,14 @@
+
+.SectionTwo{
+    background: url(https://wallpaperaccess.com/full/1700222.jpg);
+    background-repeat: no-repeat;
+      background-size: cover;
+      padding: 50px;
+    
+  }
+  
+  
+  .SectionTwoBox{
+    background-color: rgb(255, 255, 255);
+    padding: 28px;
+  }
