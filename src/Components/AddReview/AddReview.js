@@ -5,7 +5,7 @@ const AddReview = () => {
     const [reviews, setReviews] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/get-reivew')
+        fetch('https://agile-escarpment-67839.herokuapp.com/get-reivew')
         .then(res=> res.json())
         .then(data => setReviews(data))
     })

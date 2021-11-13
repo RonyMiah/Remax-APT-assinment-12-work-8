@@ -30,7 +30,7 @@ const AddReviewFrom = () => {
         
         console.log(data)
 
-        fetch('http://localhost:5000/add-review', {
+        fetch('https://agile-escarpment-67839.herokuapp.com/add-review', {
             method: 'POST', 
             headers: {
                 'Content-Type': 'application/json'

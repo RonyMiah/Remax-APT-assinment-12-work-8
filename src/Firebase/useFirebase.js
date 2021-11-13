@@ -70,7 +70,7 @@ const useFirebase = () => {
     //user effect for get the 
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/db-user?email=${user.email}`)
+        fetch(`https://agile-escarpment-67839.herokuapp.com/db-user?email=${user.email}`)
         .then(res => res.json())
         .then(data => {
             setAdmin(data)
@@ -89,7 +89,7 @@ const useFirebase = () => {
     
         console.log(JSON.stringify(user))
 
-        fetch('http://localhost:5000/add-to-db',{
+        fetch('https://agile-escarpment-67839.herokuapp.com/add-to-db',{
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

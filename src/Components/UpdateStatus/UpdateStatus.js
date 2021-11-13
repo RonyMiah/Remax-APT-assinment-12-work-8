@@ -28,7 +28,7 @@ const UpdateStatus = () => {
         setShow(true)
 
 
-        fetch(`http://localhost:5000/update-status/${id}`, {
+        fetch(`https://agile-escarpment-67839.herokuapp.com/update-status/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ const UpdateStatus = () => {
     };
 
 
-    const url = `http://localhost:5000/orders/${id}`;
+    const url = `https://agile-escarpment-67839.herokuapp.com/orders/${id}`;
 
     useEffect(()=>{
         fetch(url)

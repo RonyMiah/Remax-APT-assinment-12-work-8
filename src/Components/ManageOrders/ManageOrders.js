@@ -16,7 +16,7 @@ const ManageOrders = () => {
     
 
     useEffect(()=>{
-        fetch('http://localhost:5000/all-orders')
+        fetch('https://agile-escarpment-67839.herokuapp.com/all-orders')
         .then(res => res.json())
         .then(data => setOrders(data));
     }, []);
@@ -52,7 +52,7 @@ const ManageOrders = () => {
             setError(null);
             setSuccess(null)
             setShow(true);
-            const url = `http://localhost:5000/cancel-order/${id}`
+            const url = `https://agile-escarpment-67839.herokuapp.com/cancel-order/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

@@ -17,7 +17,7 @@ const Services = () => {
 
     useEffect(()=>{
         setIsLoading(true)
-        fetch('http://localhost:5000/services')
+        fetch('https://agile-escarpment-67839.herokuapp.com/services')
         .then(res => res.json())
         .then(data => {
             setService(data)

@@ -1,9 +1,0 @@
-{
-  "projects": {
-    "default": "apartment-fis"
-  },
-  "rewrites": [ {
-  "source": "**",
-  "destination": "/index.html"
-} ]
-}

@@ -16,7 +16,7 @@ const ManageApartments = () => {
     
 
     useEffect(()=>{
-        fetch('http://localhost:5000/services')
+        fetch('https://agile-escarpment-67839.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setOrders(data));
     }, []);
@@ -33,7 +33,7 @@ const ManageApartments = () => {
             setError(null);
             setSuccess(null)
             setShow(true);
-            const url = `http://localhost:5000/delete/${id}`
+            const url = `https://agile-escarpment-67839.herokuapp.com/delete/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

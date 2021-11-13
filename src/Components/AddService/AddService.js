@@ -31,7 +31,7 @@ const AddService = () => {
         
         data.rating = null;
 
-        fetch('http://localhost:5000/add-new-services', {
+        fetch('https://agile-escarpment-67839.herokuapp.com/add-new-services', {
             method: 'POST', 
             headers: {
                 'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ const AddService = () => {
     // use effect for get the data 
 
     useEffect(()=>{
-        fetch('http://localhost:5000/services')
+        fetch('https://agile-escarpment-67839.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setCount(data))
     }, [])

@@ -25,7 +25,7 @@ const MyOrders = () => {
     // get the data 
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/my-orders?email=${email}`)
+        fetch(`https://agile-escarpment-67839.herokuapp.com/my-orders?email=${email}`)
         .then(res => res.json())
         .then(data => setOrders(data))
         .catch(err => setError(err))
@@ -45,7 +45,7 @@ const MyOrders = () => {
 
         if(procced && status.toString() === 'Pending'){
             clear();
-            const url = `http://localhost:5000/cancel-order/${id}`
+            const url = `https://agile-escarpment-67839.herokuapp.com/cancel-order/${id}`
         fetch(url, {
             method: 'DELETE'
         })
