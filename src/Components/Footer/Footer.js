@@ -122,7 +122,7 @@ const Footer = () => {
   {/* Copyright */}
   <div className="text-center p-4" style={{ "backgroundColor": "rgba(0, 0, 0, 0.05)"}}>
     © 2021 Copyright: 
-    <Link to="/" className="text-reset fw-bold"> Apartment fis</Link>
+    <Link to="/" className="text-reset fw-bold"> Remax Apt </Link>
   </div>
   {/*  Copyright  */}
 </footer>

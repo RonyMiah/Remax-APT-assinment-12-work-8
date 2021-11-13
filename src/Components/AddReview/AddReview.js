@@ -12,9 +12,8 @@ const AddReview = () => {
 
     return (
         <div className="py-5 my-5 review" style={{background: '#F7F7F7'}}>
-            <h1 className="text-center">Review Section</h1>
-            <p className="text-center">Thousands of customers happiness</p>
-
+            <h2 className="text-center fw-bolder"> Customer Reviews </h2>
+            <p className="text-center"> Customers  Happiness</p>
 
             <div class="container mt-5 mb-3">
                 <div class="row g-3">

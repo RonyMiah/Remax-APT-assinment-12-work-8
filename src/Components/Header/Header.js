@@ -86,7 +86,7 @@ const Header = () => {
           </Dropdown>
            :
            <Nav.Link as={NavLink} to="/login" activeStyle={style} className="me-2 ">
-            <span><i className="fas fa-sign-in-alt"></i> <span className="btn__login">Log In / Sign Up</span></span>
+            <span><i class="fas fa-user-tag"></i> <span className="btn__login">Log In</span></span>
         </Nav.Link>
         }
     </Navbar.Collapse>
