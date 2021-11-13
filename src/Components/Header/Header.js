@@ -75,9 +75,9 @@ const Header = () => {
                 && 
                 <> 
                 <Dropdown.Item as={NavLink} to="/manage-orders">Manage All Orders</Dropdown.Item>
-                <Dropdown.Item as={NavLink} to="/dashboard/add-appartment">Add An Apartment</Dropdown.Item>
+                <Dropdown.Item as={NavLink} to="/dashboard/add-appartment">Add Apt</Dropdown.Item>
                 <Dropdown.Item as={NavLink} to="/dashboard/make-admin">Make An Admin</Dropdown.Item>
-                <Dropdown.Item as={NavLink} to="/dashboard/manage-apartments">Manage Apartments</Dropdown.Item>
+                <Dropdown.Item as={NavLink} to="/dashboard/manage-apartments">Manage Apt</Dropdown.Item>
                 </>
               }
               <Dropdown.Item as={Button} onClick={logOut}>Log Out</Dropdown.Item>

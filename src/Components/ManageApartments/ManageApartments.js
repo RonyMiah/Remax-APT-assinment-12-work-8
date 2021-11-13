@@ -53,11 +53,6 @@ const ManageApartments = () => {
     }
 
 
-
-
-
-
-
     return (
         <div>
             <div id="services" className="my-5 py-5" style={{background: '#F1F5F9', borderRadius: '100px'}}>
@@ -68,7 +63,6 @@ const ManageApartments = () => {
                 <div className="container">
                     {
                         success && <Alert show={show} variant="success">
-        
         
                         <div className="d-flex justify-content-between align-items-center">
                         <p className='m-0'>{success}</p>
@@ -150,12 +144,6 @@ const ManageApartments = () => {
                             <div className="cards-footer w-100 d-flex justify-content-center align-items-center">
                             
 
-                            
-                            
-                            
-
-                            
-                            
                                 <Button  
                                 variant="danger" 
                                 style={{"padding": "5px 15px", "background": "", "color": "white",      "textDecoration":                "none"}} onClick={(e)  =>handleDelete (order?._id, order?.status)}
