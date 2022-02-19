@@ -21,31 +21,13 @@ const ManageOrders = () => {
         .then(data => setOrders(data));
     }, []);
 
-    // function MyVerticallyCenteredModal(props) {
-    //     console.log(props?.data)
-    //     return (
-    //       <Modal
-    //         {...props}
-    //         size="lg"
-    //         aria-labelledby="contained-modal-title-vcenter"
-    //         centered
-    //       >
-    //         <Modal.Header closeButton className="border-0">
-             
-    //         </Modal.Header>
-    //         <UpdateStatus data={data}></UpdateStatus>
-    //         <Modal.Footer className="border-0">
-    //           <Button onClick={props.onHide}>Close</Button>
-    //         </Modal.Footer>
-    //       </Modal>
-    //     );
-    //   }
 
 
     // handle delete for manage the data 
     
 
-    const handleDelete = (id, status) =>{
+  const handleDelete = (id, status) => {
+      
         const procced = window.confirm("Do you want to Cancel this order?")
 
         if(procced && status.toString() !== 'Shipped'){

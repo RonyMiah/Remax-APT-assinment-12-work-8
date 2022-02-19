@@ -9,14 +9,11 @@ import './Header.css';
 const Header = () => {
 
   const logo = 'https://peak-static-prod.remax.booj.io/web/branding/REMAX-logo.svg'
-    // using stat 
+  // using stat 
 
-  const {user, logOut, admin} = useAuth();
+  const { user, logOut, admin } = useAuth();
 
-
-  
-
-  console.log(admin.isAdmin)
+  // console.log(admin.isAdmin)
 
   const style = {
     "color": '#000',
@@ -24,75 +21,75 @@ const Header = () => {
     "cursor": 'pointer'
   }
 
-    return (
+  return (
 
-        // navbar section 
+    // navbar section 
 
-            <Navbar style={{backgroundColor: '#EFF4F5'}} expand="lg" sticky="top" className="shadow-lg">
-  <Container>
-    <Navbar.Brand as={NavLink} to="/" className="logo w-auto">
-        <img src={logo} alt="" className=" img-fluid" width="100px"/>
-    </Navbar.Brand>
-    <Navbar.Toggle aria-controls="navbarScroll" />
-    <Navbar.Collapse id="navbarScroll">
-      <Nav
-        className="m-auto my-2 my-lg-0"
-        style={{ "maxHeight": '100px' }}
-        navbarScroll
-      >
+    <Navbar style={{ backgroundColor: '#EFF4F5' }} expand="lg" sticky="top" className="shadow-lg">
+      <Container>
+        <Navbar.Brand as={NavLink} to="/" className="logo w-auto">
+          <img src={logo} alt="" className=" img-fluid" width="100px" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="m-auto my-2 my-lg-0"
+            style={{ "maxHeight": '100px' }}
+            navbarScroll
+          >
 
-        {/* navlink section  */}
+            {/* navlink section  */}
 
-        <Nav.Link as={NavLink} activeStyle={style} to="/home">Home</Nav.Link>
-        <Nav.Link as={NavLink} activeStyle={style} to="/apartments">Explore Remx </Nav.Link>
-        <Nav.Link as={NavLink} activeStyle={style} to="/about-us">About Us</Nav.Link>
-        <Nav.Link as={NavLink} activeStyle={style} to="/contact-us">Contact Us</Nav.Link>
-      </Nav>
+            <Nav.Link as={NavLink} activeStyle={style} to="/home">Home</Nav.Link>
+            <Nav.Link as={NavLink} activeStyle={style} to="/apartments">Explore Remx </Nav.Link>
+            <Nav.Link as={NavLink} activeStyle={style} to="/about-us">About Us</Nav.Link>
+            <Nav.Link as={NavLink} activeStyle={style} to="/contact-us">Contact Us</Nav.Link>
+          </Nav>
 
           {/* dynamic login and logout button show  */}
 
-        {
-          user?.email 
-          ? 
-          <Dropdown style={{"outline": "none"}} className="me-5">
-            <Dropdown.Toggle variant="none" id="dropdown-basic" className="outline-none">
-              
-              <i class="fas fa-columns"> </i> Dashboard
-            </Dropdown.Toggle>
+          {
+            user?.email
+              ?
+              <Dropdown style={{ "outline": "none" }} className="me-5">
+                <Dropdown.Toggle variant="none" id="dropdown-basic" className="outline-none">
 
-            <Dropdown.Menu>
-              <Dropdown.Item>{user.photoURL ? <img src={user?.photoURL} alt="" className="img-fluid rounded-circle me-2" style={{"width": "35px"}}/> : <i class="fas fa-user-circle"></i> } {user?.displayName}</Dropdown.Item>
-              {
-                !admin.isAdmin === (true || null || undefined) && <>
-                <Dropdown.Item as={NavLink} to="/my-orders">My Orders</Dropdown.Item>
-              <Dropdown.Item as={NavLink} to="/pay">Pay</Dropdown.Item>
-              <Dropdown.Item as={NavLink} to="/dashboard/add-review">Review</Dropdown.Item>
-              </>
-              }
-              
-              {
-                admin.isAdmin === true
-                && 
-                <> 
-                <Dropdown.Item as={NavLink} to="/manage-orders">Manage All Orders</Dropdown.Item>
-                <Dropdown.Item as={NavLink} to="/dashboard/add-appartment">Add Apt</Dropdown.Item>
-                <Dropdown.Item as={NavLink} to="/dashboard/make-admin">Make An Admin</Dropdown.Item>
-                <Dropdown.Item as={NavLink} to="/dashboard/manage-apartments">Manage Apt</Dropdown.Item>
-                </>
-              }
-              <Dropdown.Item as={Button} onClick={logOut}>Log Out</Dropdown.Item>
-              
-            </Dropdown.Menu>
-          </Dropdown>
-           :
-           <Nav.Link as={NavLink} to="/login" activeStyle={style} className="me-2 ">
-            <span><i class="fas fa-user-tag"></i> <span className="btn__login">Log In</span></span>
-        </Nav.Link>
-        }
-    </Navbar.Collapse>
-  </Container>
-</Navbar>
-    );
+                  <i class="fas fa-columns"> </i> Dashboard
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                  <Dropdown.Item>{user.photoURL ? <img src={user?.photoURL} alt="" className="img-fluid rounded-circle me-2" style={{ "width": "35px" }} /> : <i class="fas fa-user-circle"></i>} {user?.displayName}</Dropdown.Item>
+                  {
+                    !admin.isAdmin === (true || null || undefined) && <>
+                      <Dropdown.Item as={NavLink} to="/my-orders">My Orders</Dropdown.Item>
+                      <Dropdown.Item as={NavLink} to="/pay">Pay</Dropdown.Item>
+                      <Dropdown.Item as={NavLink} to="/dashboard/add-review">Review</Dropdown.Item>
+                    </>
+                  }
+
+                  {
+                    admin.isAdmin === true
+                    &&
+                    <>
+                      <Dropdown.Item as={NavLink} to="/manage-orders">Manage All Orders</Dropdown.Item>
+                      <Dropdown.Item as={NavLink} to="/dashboard/add-appartment">Add Apt</Dropdown.Item>
+                      <Dropdown.Item as={NavLink} to="/dashboard/make-admin">Make An Admin</Dropdown.Item>
+                      <Dropdown.Item as={NavLink} to="/dashboard/manage-apartments">Manage Apt</Dropdown.Item>
+                    </>
+                  }
+                  <Dropdown.Item as={Button} onClick={logOut}>Log Out</Dropdown.Item>
+
+                </Dropdown.Menu>
+              </Dropdown>
+              :
+              <Nav.Link as={NavLink} to="/login" activeStyle={style} className="me-2 ">
+                <span><i class="fas fa-user-tag"></i> <span className="btn__login">Log In</span></span>
+              </Nav.Link>
+          }
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 };
 
 export default Header;
